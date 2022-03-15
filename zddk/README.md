@@ -79,58 +79,6 @@
 
 7. 当本项目更新时，你所 Fork 的项目不会自动更新。在你的项目主页上点击 `Fetch upstream`-`Fetch and merge`以更新程序。
 
-### 在自己的服务器上使用
-1.
-   # 安装依赖
-   pip3 install -r requirements.txt
-   ```
-
-2. 添加用户
-   ```shell
-   python3 main.py add
-   ```
-
-   部分参数选填，根据提示执行添加用户操作
-
-   获取学校id的方法见[学校id获取](#学校id获取)
-   
-   要使用消息推送服务，你需要提前注册第三方的消息推送服务以获取密钥，见[消息推送介绍](#消息推送介绍)
-
-3. （可选）设置全局推送
-
-   ```shell
-   python3 main.py send
-   ```
-   
-   根据提示操作，设置后所有用户的填报结果都会推送到对应接口
-
-
-   以上两步也可通过直接创建 `setting.yaml` 文件以保存配置，格式参考 `setting.bak.yal` 。
-
-4. 执行程序
-   ```shell
-   python3 main.py
-   ```
-   
-   这将会立即填报一次，确保可以正确填报
-
-
-5. 设置定时填报
-   ```shell
-   vim /etc/crontab
-   ```
-   
-   向其中添加
-   ```
-   0 7,12,19 * * * root /usr/bin/python3 /root/cx_health_sign/main.py >> /root/cx_health_sign/output.log
-   ```
-   请根据实际情况作出修改
-   
-   保存文件后执行
-   ```shell
-   crontab /etc/crontab
-   ```
-   以应用 crontab 配置
 
 ## 表单
 | 表单代码 | 名称 | 备注 |
@@ -155,3 +103,6 @@
 1. 访问 http://passport2.chaoxing.com/login
 
 2.找到自己学习鼠标右击检查
+
+
+
